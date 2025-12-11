@@ -18,15 +18,8 @@ def impedance(Z):
     
 def c2p(a): # Imprime por pantalla un complejo en notación polar (ángulo en grados)
     return f'{abs(a):.3f}<{phase(a)*180/pi:.3f}'
-# def c2pp(a): # Primera función de Pelli
-#     print(f'    \item $I_{{L_1}}={abs(a):.2f} \\angle {phase(a)*180/pi:.2f}A \hspace{{0.35cm}}$')
-# def cc2pp(var,a,units): # Imprime por pantalla el texto para Latex (mejora la de Pelli, permitiendo especificar Variable y unidades)
-#     print(f'    \item ${var}={abs(a):.2f} \\angle {phase(a)*180/pi:.2f}{units} \hspace{{0.35cm}}$')
 def tension(V): # A partir del modulo de la tensión de línea devuelve las tensiones de fase y línea (criterio secuencia directa)
     return [rect(V/sqrt(3),90*pi/180),rect(V/sqrt(3),-30*pi/180),rect(V/sqrt(3),-150*pi/180),rect(V,120*pi/180),V,rect(V,-120*pi/180)]
-
-# def dephase(c): # Desfasa el complejo 120º en el sentido de las agujas del reloj 
-#     return c*rect(1,-2*pi/3)
 
 # def z_equiv(serie,R,L,C):
 #     Zl = w*L*1j
